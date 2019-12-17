@@ -12,6 +12,10 @@ services:
     working_dir: /usr/src/app
     networks:
       - app-network
+    environment:
+      - NODE_ENV=development
+      - DATABASE=mongodb://mongodb:27017/playground
+      - PORT=3000
     links:
       - mongodb
 
